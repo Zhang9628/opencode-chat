@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100 m-0 font-sans;
+  }
+
+  #root {
+    @apply h-screen flex flex-col;
+  }
+}
+
+/* Blinking cursor for typewriter effect */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typing-cursor::after {
+  content: '█';
+  animation: blink 0.8s step-end infinite;
+  @apply ml-0.5 text-gray-400;
+}
